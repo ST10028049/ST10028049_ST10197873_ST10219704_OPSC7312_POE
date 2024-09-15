@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ST10028049_ST10197873_ST10219704_OPSC7312_POE</string>
+    <string name="client_id">794718366484-6t2p7e4k4on22bj3at32lp4d9tl7im4n.apps.googleusercontent.com</string>
+    <string-array name="meal_types">
+        <item>Breakfast</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+        <item>Snack</item>
+        <item>Dessert</item>
+        <item>Other</item>
+    </string-array>
+</resources>

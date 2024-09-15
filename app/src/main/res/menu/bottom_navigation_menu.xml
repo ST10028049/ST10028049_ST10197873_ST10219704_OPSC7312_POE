@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/baseline_bungalow_24"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/nav_food"
+        android:icon="@drawable/nav_food"
+        android:title="Food" />
+
+    <item
+        android:id="@+id/nav_exercise"
+        android:icon="@drawable/ic_exercise"
+        android:title="Exercise" />
+
+    <item
+        android:id="@+id/nav_notifications"
+        android:icon="@drawable/ic_notifications"
+        android:title="Notifications" />
+
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/ic_settings"
+        android:title="Settings" />
+
+</menu>

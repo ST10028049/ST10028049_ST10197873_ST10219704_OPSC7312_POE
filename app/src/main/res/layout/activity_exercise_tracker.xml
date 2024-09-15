@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Exercise Tracker Title -->
+        <TextView
+            android:id="@+id/exercise_tracker_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Exercise Tracker"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Today's Summary Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:elevation="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Today:"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="102 cal"
+                    android:textSize="16sp"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                     />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="25 mins"
+                    android:textSize="16sp"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Exercise Name Input -->
+        <EditText
+            android:id="@+id/exercise_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Exercise name:"
+            android:text="Deadlifts"
+            android:padding="12dp"
+            android:background="@android:color/white"
+            android:layout_marginBottom="16dp"
+            android:elevation="2dp"
+            android:textColor="@android:color/black"
+            android:inputType="text" />
+
+        <!-- Sets and Reps Section -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginEnd="32dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sets:"
+                android:textSize="16sp"
+                android:layout_gravity="center" />
+
+            <EditText
+                android:id="@+id/sets_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="Enter sets"
+                android:inputType="number"
+                android:padding="8dp"
+                android:background="@android:color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reps:"
+                android:textSize="16sp"
+                android:layout_gravity="center" />
+
+            <EditText
+                android:id="@+id/reps_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="Enter reps"
+                android:inputType="number"
+                android:padding="8dp"
+                android:background="@android:color/white" />
+        </LinearLayout>
+
+        <!-- Calories Burnt Input -->
+        <EditText
+            android:id="@+id/calories_burnt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Calories burnt:"
+            android:text="60"
+            android:padding="12dp"
+            android:background="@android:color/white"
+            android:layout_marginBottom="16dp"
+            android:elevation="2dp"
+            android:inputType="number"
+            android:textColor="@android:color/black" />
+
+        <!-- Date Picker -->
+        <EditText
+            android:id="@+id/date_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date:"
+            android:padding="12dp"
+            android:background="@android:color/white"
+            android:layout_marginBottom="16dp"
+            android:elevation="2dp"
+            android:inputType="date"
+            android:textColor="@android:color/black"
+            android:focusable="false"
+            android:clickable="true" />
+
+        <!-- Start Time Picker -->
+        <EditText
+            android:id="@+id/start_time_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Start time:"
+            android:padding="12dp"
+            android:background="@android:color/white"
+            android:layout_marginBottom="16dp"
+            android:elevation="2dp"
+            android:inputType="time"
+            android:textColor="@android:color/black"
+            android:focusable="false"
+            android:clickable="true" />
+
+        <!-- End Time Picker -->
+        <EditText
+            android:id="@+id/end_time_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="End time:"
+            android:padding="12dp"
+            android:background="@android:color/white"
+            android:layout_marginBottom="16dp"
+            android:elevation="2dp"
+            android:inputType="time"
+            android:textColor="@android:color/black"
+            android:focusable="false"
+            android:clickable="true" />
+
+        <!-- Notes Input -->
+        <EditText
+            android:id="@+id/notes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Notes:"
+            android:padding="12dp"
+            android:background="@android:color/white"
+            android:layout_marginBottom="16dp"
+            android:elevation="2dp"
+            android:inputType="textMultiLine"
+            android:minHeight="80dp"
+            android:gravity="top"
+            android:textColor="@android:color/black" />
+
+        <!-- Log Exercise Button -->
+        <Button
+            android:id="@+id/log_exercise_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Log Exercise"
+            android:backgroundTint="@android:color/holo_blue_light"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+</ScrollView>
