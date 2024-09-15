@@ -46,7 +46,7 @@ class Main_Menu : AppCompatActivity() {
         }*/
 
         settings.setOnClickListener {
-            startActivity(Intent(this, SettingsActivity::class.java))
+            startActivity(Intent(this, SettingsMenu::class.java))
         }
     }
 }
