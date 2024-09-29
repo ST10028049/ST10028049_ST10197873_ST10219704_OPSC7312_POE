@@ -1,12 +1,16 @@
 package za.ac.iie.opsc7312.st10028049_st10197873_st10219704_opsc7312_poe
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
+import android.preference.PreferenceManager
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.Switch
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CircleCrop
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -17,6 +21,9 @@ class SettingsMenu : AppCompatActivity() {
 
     private lateinit var usernameDisplay: TextView
     private lateinit var profileImageView: ImageView
+    private lateinit var nightModeSwitch: Switch
+    private lateinit var backbutton: ImageView
+    private lateinit var preferences: SharedPreferences
 
     private lateinit var auth: FirebaseAuth
 
@@ -27,10 +34,27 @@ class SettingsMenu : AppCompatActivity() {
         // Initialize Firebase Auth
         auth = FirebaseAuth.getInstance()
 
-
-        // Find the views
+// Initialize views
         usernameDisplay = findViewById(R.id.usernameDisplay)
         profileImageView = findViewById(R.id.profileImageView)
+        nightModeSwitch = findViewById(R.id.nightModeSwitch)
+
+
+        // Initialize SharedPreferences
+        preferences = PreferenceManager.getDefaultSharedPreferences(this)
+
+        val isNightMode = preferences.getBoolean("night_mode", false)
+        nightModeSwitch.isChecked = isNightMode
+
+        // Apply the correct theme
+        setNightMode(isNightMode)
+
+        // Listen for switch changes
+        nightModeSwitch.setOnCheckedChangeListener { _, isChecked ->
+            // Save the night mode preference
+            preferences.edit().putBoolean("night_mode", isChecked).apply()
+            setNightMode(isChecked)
+        }
 
         // Check if the user is signed in
         val currentUser = auth.currentUser
@@ -82,6 +106,33 @@ class SettingsMenu : AppCompatActivity() {
             }
         }
     }
+
+    private fun setNightMode(isNightMode: Boolean) {
+        val settingsText = findViewById<TextView>(R.id.settingsText) // Add this line to reference the Settings TextView
+
+        if (isNightMode) {
+            // Set dark mode
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+
+            // Update UI for night mode
+            usernameDisplay.setTextColor(resources.getColor(android.R.color.white))
+            settingsText.setTextColor(resources.getColor(android.R.color.white)) // Update settingsText color for dark mode
+
+            // Set back button drawable to dark
+            findViewById<ImageView>(R.id.back).setColorFilter(resources.getColor(android.R.color.white))
+        } else {
+            // Set light mode
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+
+            // Reset UI for light mode
+            usernameDisplay.setTextColor(resources.getColor(android.R.color.black))
+            settingsText.setTextColor(resources.getColor(android.R.color.black)) // Update settingsText color for light mode
+
+            // Set back button drawable to light
+            findViewById<ImageView>(R.id.back).setColorFilter(resources.getColor(android.R.color.black))
+        }
+    }
+
 
     private fun navigateToWelcome() {
         val intent = Intent(this, MainActivity::class.java)  // Adjust the target activity
