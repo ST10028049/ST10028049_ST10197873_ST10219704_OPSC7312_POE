@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jane Salis"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvMealPlanHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Meal Plan"
+        android:textSize="24sp"
+        android:paddingTop="16dp" />
+
+    <!-- Current meal plan -->
+    <TextView
+        android:id="@+id/tvCurrentMealPlan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Meal Plan:"
+        android:textSize="18sp"
+        android:paddingTop="8dp" />
+
+    <LinearLayout
+        android:id="@+id/llCurrentMealPlan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!-- Dynamically added recipe views will be shown here -->
+    </LinearLayout>
+
+    <!-- Button to start a new meal plan -->
+    <Button
+        android:id="@+id/btnStartMealPlan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start New Meal Plan"
+        android:paddingTop="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Previous Meal Plans"
+        android:textSize="18sp"
+        android:paddingTop="16dp" />
+
+    <LinearLayout
+        android:id="@+id/llPreviousMealPlans"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!-- Dynamically added previous meal plans -->
+    </LinearLayout>
+
+</LinearLayout>
+
+
+

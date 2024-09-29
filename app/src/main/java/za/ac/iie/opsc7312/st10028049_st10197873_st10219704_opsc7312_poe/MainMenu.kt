@@ -29,9 +29,9 @@ class Main_Menu : AppCompatActivity() {
             startActivity(Intent(this, MealDetailsActivity::class.java))
         }
 
-        /*mealPlanning.setOnClickListener {
-            startActivity(Intent(this, MealPlanningActivity::class.java))
-        }*/
+        mealPlanning.setOnClickListener {
+            startActivity(Intent(this, MealPlan::class.java))
+        }
 
         /*reportsAnalytics.setOnClickListener {
             startActivity(Intent(this, ReportsAnalyticsActivity::class.java))
