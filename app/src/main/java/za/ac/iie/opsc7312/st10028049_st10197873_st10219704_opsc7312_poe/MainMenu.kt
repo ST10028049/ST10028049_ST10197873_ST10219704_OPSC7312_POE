@@ -26,7 +26,7 @@ class Main_Menu : AppCompatActivity() {
         }
 
         foodDiary.setOnClickListener {
-            startActivity(Intent(this, MealDetailsActivity::class.java))
+            startActivity(Intent(this, FoodDiaryActivity::class.java))
         }
 
         mealPlanning.setOnClickListener {
