@@ -17,7 +17,7 @@
         android:textColor="@android:color/black"
         android:layout_marginBottom="24dp" />
 
-    <!-- Meal Name Label -->
+    <!-- Meal Name -->
     <TextView
         android:id="@+id/label_meal_name"
         android:layout_width="wrap_content"
@@ -26,7 +26,6 @@
         android:textSize="18sp"
         android:layout_marginBottom="8dp" />
 
-    <!-- Text Box for capturing meal name -->
     <EditText
         android:id="@+id/input_meal_name"
         android:layout_width="match_parent"
@@ -34,7 +33,7 @@
         android:hint="Enter meal name"
         android:inputType="text" />
 
-    <!-- Meal Description Label -->
+    <!-- Meal Description -->
     <TextView
         android:id="@+id/label_meal_description"
         android:layout_width="wrap_content"
@@ -44,7 +43,6 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="8dp" />
 
-    <!-- Text Box for capturing meal description -->
     <EditText
         android:id="@+id/input_meal_description"
         android:layout_width="match_parent"
@@ -52,7 +50,7 @@
         android:hint="Enter meal description"
         android:inputType="textMultiLine" />
 
-    <!-- Meal Type Label -->
+    <!-- Meal Type -->
     <TextView
         android:id="@+id/label_meal_type"
         android:layout_width="wrap_content"
@@ -62,12 +60,64 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="8dp" />
 
-    <!-- Dropdown for selecting meal type -->
     <Spinner
         android:id="@+id/spinner_meal_type"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:entries="@array/meal_types" />
+
+    <!-- Calories -->
+    <TextView
+        android:id="@+id/label_calories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calories"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/input_calories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter calories"
+        android:inputType="number" />
+
+    <!-- Date -->
+    <TextView
+        android:id="@+id/label_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Date"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/input_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Pick date"
+        android:focusable="false"
+        android:clickable="true" />
+
+    <!-- Time -->
+    <TextView
+        android:id="@+id/label_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Time"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/input_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Pick time"
+        android:focusable="false"
+        android:clickable="true" />
 
     <!-- Submit Button -->
     <Button
@@ -77,5 +127,4 @@
         android:text="Submit"
         android:layout_marginTop="24dp"
         android:layout_gravity="center_horizontal" />
-
 </LinearLayout>

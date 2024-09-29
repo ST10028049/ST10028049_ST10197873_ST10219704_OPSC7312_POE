@@ -8,5 +8,13 @@
     <color name="blue">#459DE4</color>
     <color name="red">#FF0000</color>
 
+    <color name="primary">#1B023B</color>
+    <color name="secondary">#FF03DAC5</color>
 
+    <color name="night_mode">#6124B1</color>
+    <color name="nofitications">#6124B1</color>
+    <color name="private_account">#6124B1</color>
+    <color name="security">#6124B1</color>
+
+    <color name="goal_box_color">#00A1E0</color>
 </resources>

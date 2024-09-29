@@ -37,9 +37,9 @@ class Main_Menu : AppCompatActivity() {
             startActivity(Intent(this, ReportsAnalyticsActivity::class.java))
         }*/
 
-        /*goals.setOnClickListener {
-            startActivity(Intent(this, GoalsActivity::class.java))
-        }*/
+        goals.setOnClickListener {
+            startActivity(Intent(this, Goals::class.java))
+        }
 
         /*fitnessPrograms.setOnClickListener {
             startActivity(Intent(this, FitnessProgramsActivity::class.java))

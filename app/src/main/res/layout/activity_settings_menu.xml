@@ -6,146 +6,108 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@android:color/white">
+    android:background="@color/primary">
 
-    <!-- Search Bar -->
-    <EditText
-        android:id="@+id/search_bar"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Search for a setting..."
-        android:padding="12dp"
-        android:background="@android:color/darker_gray"
-        android:drawableLeft="@android:drawable/ic_menu_search"
-        android:layout_marginBottom="16dp"/>
+        android:layout_height="wrap_content">
 
-    <!-- Settings Options -->
-    <!-- Profile -->
-    <LinearLayout
+    <ImageView
+    android:layout_width="50dp"
+        android:layout_height="50dp"
+    android:src="@drawable/back_btn"
+    android:padding="14dp" />
+
+    <TextView
+    android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    android:text="Settings"
+    android:layout_centerInParent="true"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        />
+
+    </RelativeLayout>
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="12dp"
-        android:gravity="center_vertical"
-        android:clickable="true"
-        android:background="?attr/selectableItemBackground">
+        android:layout_height="wrap_content">
 
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@android:drawable/ic_menu_myplaces"
-            android:contentDescription="Profile Icon"/>
-
-        <TextView
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Profile"
-            android:paddingStart="16dp"
-            android:textSize="16sp"/>
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/profileImageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile_icon" />
 
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@android:drawable/ic_menu_more"
-            android:contentDescription="Arrow Icon"/>
-    </LinearLayout>
+            <TextView
+                android:id="@+id/usernameDisplay"
+            android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+            android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="John Kantos"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold" />
 
-    <!-- Notifications -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="12dp"
-        android:gravity="center_vertical"
-        android:clickable="true"
-        android:background="?attr/selectableItemBackground">
+            <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:paddingStart="30dp"
+            android:layout_gravity="center"
+            android:background="@drawable/round_back_secondary_100"
+            android:text="Edit Profile"
+                android:textAllCaps="false"
+            android:textColor="@color/primary"
+            android:paddingEnd="30dp" />
 
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@android:drawable/ic_menu_agenda"
-            android:contentDescription="Notifications Icon"/>
+            <LinearLayout
+            android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical"
+            android:padding="15dp">
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Notifications"
-            android:paddingStart="16dp"
-            android:textSize="16sp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@android:drawable/ic_menu_more"
-            android:contentDescription="Arrow Icon"/>
-    </LinearLayout>
+            <ImageView
+                android:background="@drawable/round_back_white10_20"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
 
-    <!-- Appearance -->
-    <LinearLayout
+                android:padding="12dp"/>
 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="12dp"
-        android:gravity="center_vertical"
-        android:clickable="true"
-        android:background="?attr/selectableItemBackground">
+            </RelativeLayout>
+            </LinearLayout>
 
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@android:drawable/ic_menu_gallery"
-            android:contentDescription="Appearance Icon"/>
+            <Button
+                android:id="@+id/logoutButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:textAllCaps="false"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/primary"
+                android:background="@drawable/round_back_secondary_100" />
 
-        <TextView
-            android:id="@+id/appearenceBtn"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Appearance"
-            android:paddingStart="16dp"
-            android:textSize="16sp"/>
 
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@android:drawable/ic_menu_more"
-            android:contentDescription="Arrow Icon"/>
-    </LinearLayout>
+        </LinearLayout>
 
-    <!-- Add more options similarly -->
+    </ScrollView>
 
-    <!-- Log Out -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="12dp"
-        android:gravity="center_vertical"
-        android:clickable="true"
-        android:background="?attr/selectableItemBackground">
-
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@android:drawable/ic_lock_power_off"
-            android:contentDescription="Log Out Icon"/>
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Log Out"
-            android:paddingStart="16dp"
-            android:textSize="16sp"/>
-
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@android:drawable/ic_menu_more"
-            android:contentDescription="Arrow Icon"/>
-    </LinearLayout>
 
 </LinearLayout>
