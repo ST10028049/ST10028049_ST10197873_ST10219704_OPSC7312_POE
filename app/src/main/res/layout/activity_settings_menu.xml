@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@color/primary">
+    >
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -18,15 +18,14 @@
     android:src="@drawable/back_btn"
     android:padding="14dp" />
 
-    <TextView
-    android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-    android:text="Settings"
-    android:layout_centerInParent="true"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        android:textSize="18sp"
-        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Settings"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
@@ -54,7 +53,7 @@
             android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:text="John Kantos"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textSize="22sp"
                 android:textStyle="bold" />
 
@@ -71,6 +70,7 @@
             android:paddingEnd="30dp" />
 
             <LinearLayout
+                android:background="@drawable/round_back_white10_20"
             android:layout_width="match_parent"
                 android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -84,28 +84,324 @@
                 android:layout_height="wrap_content">
 
             <ImageView
-                android:background="@drawable/round_back_white10_20"
+                android:id = "@+id/nightIcon"
+                android:background="@drawable/icon_background"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-
+                android:src="@drawable/night_mode"
                 android:padding="12dp"/>
 
+                <TextView
+                    android:layout_marginStart="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Night Mode"
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_toEndOf="@+id/nightIcon"/>
+
+                <!-- Switch for Night Mode -->
+                <Switch
+                    android:id="@+id/nightModeSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="8dp"
+                    android:thumbTint="#3F51B5"
+                    android:trackTint="#3F51B5" />
+
             </RelativeLayout>
+
             </LinearLayout>
 
-            <Button
-                android:id="@+id/logoutButton"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:background="@drawable/round_back_white10_20"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Logout"
-                android:textAllCaps="false"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:textColor="@color/primary"
-                android:background="@drawable/round_back_secondary_100" />
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id = "@+id/nofificationsIcon"
+                        android:background="@drawable/notifications_background"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_notifications"
+                        android:padding="12dp"/>
+
+                    <TextView
+                        android:layout_marginStart="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Notifications"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:layout_toEndOf="@+id/nofificationsIcon"/>
+
+                    <!-- Switch for Night Mode -->
+                    <Switch
+                        android:id="@+id/notifications_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:padding="8dp"
+                        android:thumbTint="#2196F3"
+                        android:trackTint="#2196F3" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:background="@drawable/round_back_white10_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id = "@+id/about"
+                        android:background="@drawable/about_background"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/about_us"
+                        android:padding="12dp"/>
+
+                    <TextView
+                        android:layout_marginStart="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="About"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:layout_toEndOf="@+id/about"/>
+
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@drawable/round_back_white10_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id = "@+id/Contact"
+                        android:background="@drawable/contact_background"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/contact"
+                        android:padding="12dp"/>
+
+                    <TextView
+                        android:layout_marginStart="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Contact Us"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:layout_toEndOf="@+id/Contact"/>
+
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- Support centre -->
+            <LinearLayout
+                android:background="@drawable/round_back_white10_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id = "@+id/support"
+                        android:background="@drawable/notifications_background"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/baseline_contact_support_24"
+                        android:padding="12dp"/>
+
+                    <TextView
+                        android:layout_marginStart="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Support Centre"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:layout_toEndOf="@+id/support"/>
+
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- Achievements -->
+            <LinearLayout
+                android:background="@drawable/round_back_white10_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id = "@+id/achievements"
+                        android:background="@drawable/icon_background"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/achievements"
+                        android:padding="12dp"/>
+
+                    <TextView
+                        android:layout_marginStart="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Achievements"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:layout_toEndOf="@+id/achievements"/>
+
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- Language -->
+            <LinearLayout
+                android:background="@drawable/round_back_white10_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id = "@+id/Language"
+                        android:background="@drawable/about_background"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/language"
+                        android:padding="12dp"/>
+
+                    <TextView
+                        android:layout_marginStart="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Language"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:layout_toEndOf="@+id/Language"/>
+
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- Log out -->
+            <LinearLayout
+                android:background="@drawable/round_back_white10_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id = "@+id/logout"
+                        android:background="@drawable/contact_background"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/power"
+                        android:padding="12dp"/>
+
+                    <TextView
+                        android:layout_marginStart="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Log out"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:layout_toEndOf="@+id/logout"/>
+
+
+
+                </RelativeLayout>
+            </LinearLayout>
 
 
         </LinearLayout>
+
+
+
 
     </ScrollView>
 

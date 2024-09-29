@@ -17,7 +17,7 @@ class SettingsMenu : AppCompatActivity() {
 
     private lateinit var usernameDisplay: TextView
     private lateinit var profileImageView: ImageView
-    private lateinit var logoutButton: Button
+
     private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,11 +27,6 @@ class SettingsMenu : AppCompatActivity() {
         // Initialize Firebase Auth
         auth = FirebaseAuth.getInstance()
 
-        logoutButton = findViewById(R.id.logoutButton)
-
-        logoutButton.setOnClickListener {
-            logoutUser()
-        }
 
         // Find the views
         usernameDisplay = findViewById(R.id.usernameDisplay)

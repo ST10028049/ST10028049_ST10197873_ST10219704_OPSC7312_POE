@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ST10028049_ST10197873_ST10219704_OPSC7312_POE</string>
+    <string name="app_name">HealthSync</string>
     <string name="default_web_client_id">794718366484-grv1vb611mao77s1vgr9ea9ej3und6hn.apps.googleusercontent.com</string>
 
     <string-array name="meal_types">
