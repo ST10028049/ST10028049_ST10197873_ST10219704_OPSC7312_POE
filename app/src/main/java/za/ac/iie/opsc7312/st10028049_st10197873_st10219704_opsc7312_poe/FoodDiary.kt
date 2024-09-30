@@ -13,6 +13,7 @@ class FoodDiaryActivity : AppCompatActivity() {
     private lateinit var todaysKcal: TextView
     private lateinit var todaysWater: TextView
     private lateinit var yesterdaysWater: TextView
+    private lateinit var viewMeal: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,11 +25,18 @@ class FoodDiaryActivity : AppCompatActivity() {
         todaysKcal = findViewById(R.id.todays_kcal)
         todaysWater = findViewById(R.id.todays_water)
         yesterdaysWater = findViewById(R.id.yesterdays_water)
+        viewMeal = findViewById(R.id.more_options_button)
 
         // Set up click listener for the add meal button
         addMealButton.setOnClickListener {
             // Start AddMealActivity
             val intent = Intent(this, MealDetailsActivity::class.java)
+            startActivity(intent)
+        }
+
+        viewMeal.setOnClickListener {
+            // Start AddMealActivity
+            val intent = Intent(this, ViewMealsActivity::class.java)
             startActivity(intent)
         }
 

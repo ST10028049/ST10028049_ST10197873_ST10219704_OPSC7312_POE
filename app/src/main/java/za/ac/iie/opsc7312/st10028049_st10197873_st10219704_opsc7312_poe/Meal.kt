@@ -6,9 +6,13 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import org.json.JSONArray
+import org.json.JSONObject
 import za.ac.iie.opsc7312.st10028049_st10197873_st10219704_opsc7312_poe.R
 import java.util.*
 
+// This code was adapted using ChatGPT
+// Link: https://chatgpt.com/
 class MealDetailsActivity : AppCompatActivity() {
 
     private lateinit var mealNameEditText: EditText
@@ -32,6 +36,7 @@ class MealDetailsActivity : AppCompatActivity() {
         timeEditText = findViewById(R.id.input_time)
         submitButton = findViewById(R.id.button_submit)
 
+        // Initialize SharedPreferences
         sharedPreferences = getSharedPreferences("AppSettings", MODE_PRIVATE)
 
         // Date picker
@@ -59,12 +64,22 @@ class MealDetailsActivity : AppCompatActivity() {
             }, hour, minute, true).show()
         }
 
+        // Submit button logic
         submitButton.setOnClickListener {
             captureAndStoreMealDetails()
         }
     }
 
     private fun captureAndStoreMealDetails() {
+        // Retrieve uid from SharedPreferences
+        val uid = sharedPreferences.getString("uid", null)
+
+        if (uid == null) {
+            Toast.makeText(this, "User not logged in. Please log in to submit meal.", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        // Capture meal details from UI inputs
         val mealName = mealNameEditText.text.toString().trim()
         val mealDescription = mealDescriptionEditText.text.toString().trim()
         val mealType = mealTypeSpinner.selectedItem.toString()
@@ -72,24 +87,46 @@ class MealDetailsActivity : AppCompatActivity() {
         val date = dateEditText.text.toString().trim()
         val time = timeEditText.text.toString().trim()
 
+        // Validate input
         if (mealName.isNotEmpty() && date.isNotEmpty() && time.isNotEmpty()) {
-            // Store the meal details in SharedPreferences
+            // Create a new Meal object
+            val newMeal = Meal(
+                name = mealName,
+                description = mealDescription,
+                type = mealType,
+                calories = calories,
+                date = date,
+                time = time
+            )
+
+            // Retrieve the existing meal list as a JSON array
+            val mealsString = sharedPreferences.getString("meals", "[]")
+            val mealsArray = JSONArray(mealsString)
+
+            // Add new meal to the JSON array
+            val mealJson = JSONObject().apply {
+                put("uid", uid)
+                put("mealName", newMeal.name)
+                put("mealDescription", newMeal.description)
+                put("mealType", newMeal.type)
+                put("calories", newMeal.calories)
+                put("date", newMeal.date)
+                put("time", newMeal.time)
+            }
+            mealsArray.put(mealJson)
+
+            // Save the updated meal list back to SharedPreferences
             val editor = sharedPreferences.edit()
-            editor.putString("mealName", mealName)
-            editor.putString("mealDescription", mealDescription)
-            editor.putString("mealType", mealType)
-            editor.putInt("calories", calories)
-            editor.putString("date", date)
-            editor.putString("time", time)
-            editor.apply()  // Apply the changes
+            editor.putString("meals", mealsArray.toString())
+            editor.apply()
 
             Toast.makeText(this, "Meal details saved successfully", Toast.LENGTH_SHORT).show()
-            // Optionally, you can clear the input fields here
             clearInputFields()
         } else {
             Toast.makeText(this, "Please enter all required fields", Toast.LENGTH_SHORT).show()
         }
     }
+
 
     private fun clearInputFields() {
         mealNameEditText.text.clear()
