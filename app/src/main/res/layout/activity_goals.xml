@@ -41,6 +41,7 @@
             android:textColor="@color/black"/>
 
         <ImageView
+            android:id="@+id/add_goal"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:src="@drawable/ic_add_goal"

@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.preference.PreferenceManager
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.Switch
 import android.widget.TextView
 import android.widget.Toast
@@ -24,7 +25,7 @@ class SettingsMenu : AppCompatActivity() {
     private lateinit var nightModeSwitch: Switch
     private lateinit var backbutton: ImageView
     private lateinit var preferences: SharedPreferences
-
+    private lateinit var logoutFunction: LinearLayout
     private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,6 +55,13 @@ class SettingsMenu : AppCompatActivity() {
             // Save the night mode preference
             preferences.edit().putBoolean("night_mode", isChecked).apply()
             setNightMode(isChecked)
+        }
+
+        logoutFunction = findViewById(R.id.logoutFunction)
+
+        // Set an OnClickListener on the logout layout
+        logoutFunction.setOnClickListener {
+            logout()
         }
 
         // Check if the user is signed in
@@ -88,6 +96,19 @@ class SettingsMenu : AppCompatActivity() {
         }
     }
 
+    private fun logout() {
+        // Sign out from Firebase
+        auth.signOut()
+
+        // Clear any other session data if needed
+        // SharedPreferences or any session management code here
+
+        // Navigate to Login Activity
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+        finish() // Close the current activity
+        Toast.makeText(this, "Logged out successfully", Toast.LENGTH_SHORT).show()
+    }
     private fun logoutUser() {
         // Sign out from Firebase
         auth.signOut()

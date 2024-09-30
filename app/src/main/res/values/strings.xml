@@ -10,4 +10,11 @@
         <item>Dessert</item>
         <item>Other</item>
     </string-array>
+
+    <string-array name="goal_types">
+        <item>Eat Calories</item>
+        <item>Burn Calories</item>
+        <item>Steps</item>
+        <item>Water Intake</item>
+    </string-array>
 </resources>
