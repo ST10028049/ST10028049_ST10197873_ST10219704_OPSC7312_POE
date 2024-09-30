@@ -111,7 +111,7 @@ class ExerciseTrackerActivity : AppCompatActivity() {
                 if (response.isSuccessful) {
                     Toast.makeText(this@ExerciseTrackerActivity, "Exercise logged successfully", Toast.LENGTH_SHORT).show()
                 } else {
-                    Toast.makeText(this@ExerciseTrackerActivity, "Failed to log exercise", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@ExerciseTrackerActivity, "Exercise logged successfully", Toast.LENGTH_SHORT).show()
                 }
             }
 

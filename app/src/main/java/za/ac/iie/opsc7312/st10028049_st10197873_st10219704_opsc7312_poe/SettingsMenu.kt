@@ -64,6 +64,8 @@ class SettingsMenu : AppCompatActivity() {
 
         logoutFunction = findViewById(R.id.logoutFunction)
         aboutFunction = findViewById(R.id.aboutFunction)
+        contactFunction = findViewById(R.id.contactFunction)
+        supportFunction = findViewById(R.id.supportFunction)
 
         // Set an OnClickListener on the logout layout
         logoutFunction.setOnClickListener {
@@ -73,6 +75,15 @@ class SettingsMenu : AppCompatActivity() {
         aboutFunction.setOnClickListener {
             startActivity(Intent(this, AboutUs::class.java))
         }
+
+        contactFunction.setOnClickListener {
+            startActivity(Intent(this, ContactUs::class.java))
+        }
+
+        supportFunction.setOnClickListener {
+            startActivity(Intent(this, Support::class.java))
+        }
+
 
         // Check if the user is signed in
         val currentUser = auth.currentUser

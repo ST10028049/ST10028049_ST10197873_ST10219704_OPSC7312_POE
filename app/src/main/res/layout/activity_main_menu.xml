@@ -8,7 +8,6 @@
     android:padding="16dp"
     android:background="#F5F5F5"
     tools:context=".Main_Menu">
-
     <!-- Exercise Tracking -->
     <TextView
         android:id="@+id/tv_exercise_tracking"
@@ -22,7 +21,6 @@
         android:background="?android:attr/selectableItemBackground"
         android:clickable="true"
         android:focusable="true" />
-
     <!-- Food Diary -->
     <TextView
         android:id="@+id/tv_food_diary"
@@ -36,7 +34,6 @@
         android:background="?android:attr/selectableItemBackground"
         android:clickable="true"
         android:focusable="true" />
-
     <!-- Meal Planning -->
     <TextView
         android:id="@+id/tv_meal_planning"
@@ -50,7 +47,6 @@
         android:background="?android:attr/selectableItemBackground"
         android:clickable="true"
         android:focusable="true" />
-
     <!-- Reports & Analytics -->
     <TextView
         android:id="@+id/tv_reports_analytics"
@@ -64,7 +60,6 @@
         android:background="?android:attr/selectableItemBackground"
         android:clickable="true"
         android:focusable="true" />
-
     <!-- Goals -->
     <TextView
         android:id="@+id/tv_goals"
@@ -78,7 +73,6 @@
         android:background="?android:attr/selectableItemBackground"
         android:clickable="true"
         android:focusable="true" />
-
     <!-- Fitness Programs -->
     <TextView
         android:id="@+id/tv_fitness_programs"
@@ -92,7 +86,6 @@
         android:background="?android:attr/selectableItemBackground"
         android:clickable="true"
         android:focusable="true" />
-
     <!-- Settings -->
     <TextView
         android:id="@+id/tv_settings"
@@ -106,5 +99,4 @@
         android:background="?android:attr/selectableItemBackground"
         android:clickable="true"
         android:focusable="true" />
-
 </LinearLayout>

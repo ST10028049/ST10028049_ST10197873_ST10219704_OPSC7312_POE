@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import org.json.JSONArray
 
 class FoodDiaryActivity : AppCompatActivity() {
 
@@ -33,20 +34,45 @@ class FoodDiaryActivity : AppCompatActivity() {
 
         // Set up click listener for the add meal button
         addMealButton.setOnClickListener {
-            // Start AddMealActivity
+            // Start MealDetailsActivity
             val intent = Intent(this, MealDetailsActivity::class.java)
             startActivity(intent)
         }
 
         viewMeal.setOnClickListener {
-            // Start AddMealActivity
+            // Start ViewMealsActivity
             val intent = Intent(this, ViewMealsActivity::class.java)
             startActivity(intent)
         }
 
-        // Optionally set some sample data
-        todaysKcal.text = "Today: 833 kcal"
-        todaysWater.text = "Today: 1400ml"
-        yesterdaysWater.text = "Yesterday: 2300ml"
+        // Calculate and display total calories for all meals
+        displayTotalCalories()
+    }
+
+    private fun displayTotalCalories() {
+        val uid = sharedPreferences.getString("uid", null)
+
+        if (uid != null) {
+            val mealsString = sharedPreferences.getString("meals", "[]")
+            val mealsArray = JSONArray(mealsString)
+            var totalCalories = 0
+
+            // Loop through meal logs and sum up all calories for this user
+            for (i in 0 until mealsArray.length()) {
+                val meal = mealsArray.getJSONObject(i)
+                val mealUid = meal.getString("uid")
+                val mealCalories = meal.getString("calories") // Assuming calories are stored as a string
+
+                // Only add calories if the meal belongs to the current user
+                if (mealUid == uid) {
+                    totalCalories += mealCalories.toIntOrNull() ?: 0 // Convert string to int, handle non-numeric safely
+                }
+            }
+
+            // Update the TextView with the total calories
+            todaysKcal.text = "Today: $totalCalories kcal"
+        } else {
+            todaysKcal.text = "Total: 0 kcal"
+        }
     }
 }

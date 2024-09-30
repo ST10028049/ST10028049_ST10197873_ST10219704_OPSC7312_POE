@@ -49,7 +49,7 @@
         android:textSize="16sp"
         android:layout_marginBottom="16dp"
         android:background="?attr/colorPrimary"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/black" />
 
     <!-- Sign-up Link -->
     <TextView

@@ -1,6 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<!--This medthod is adapted from (ʍѳђઽ૯ท.2018)-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:src="@drawable/back_btn" />
+
+        <TextView
+            android:id="@+id/welcome_text"
+            android:layout_width="233dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="110dp"
+            android:paddingBottom="16dp"
+            android:text="Support Centre:"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/description_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome to the HealthSync Support Centre!
+We're here to help you make the most out of your HealthSync experience. Whether you're encountering an issue, have a question, or just need some guidance on how to use our app, our dedicated support team is ready to assist you."
+            android:textSize="16sp"
+            android:layout_margin="10sp"
+            android:lineSpacingExtra="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="How can we help?"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingTop="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="-Frequently Asked Questions (FAQ):
+Visit our FAQ section for answers to common questions about account setup, app features, troubleshooting, and more."
+            android:textSize="16sp"
+            android:layout_margin="10sp"
+            android:lineSpacingExtra="4dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="-User Guides and Tutorials:
+Explore our comprehensive user guides and step-by-step tutorials to get the most out of HealthSync. Whether you're new to the app or looking to explore advanced features, our guides are here to help."
+            android:textSize="16sp"
+            android:layout_margin="10sp"
+            android:lineSpacingExtra="4dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="-Contact Support:
+If you need personalized assistance, our support team is just a message away. You can reach out to us via email or live chat. We aim to respond to all inquiries within 24 hours."
+            android:textSize="16sp"
+            android:layout_margin="10sp"
+            android:lineSpacingExtra="4dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="-Email Support: Send us an email at support@healthsync.com with your query, and we'll get back to you as soon as possible."
+            android:textSize="16sp"
+            android:layout_margin="20sp"
+            android:lineSpacingExtra="4dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="-Live Chat: Connect with a support agent in real-time through our in-app live chat feature. Available from 9 AM to 5 PM (GMT+2), Monday to Friday."
+            android:textSize="16sp"
+            android:layout_margin="20sp"
+            android:lineSpacingExtra="4dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="-Report an Issue:
+If you encounter a bug or technical problem, please let us know through the Report an Issue feature within the app. Your feedback is crucial in helping us improve your experience.."
+            android:textSize="16sp"
+            android:layout_margin="10sp"
+            android:lineSpacingExtra="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stay Updated"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingTop="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="-HealthSync Updates: Keep an eye on our Updates section for the latest news, feature releases, and improvements. We continuously work on enhancing the app based on your feedback."
+            android:textSize="16sp"
+            android:layout_margin="10sp"
+            android:lineSpacingExtra="4dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="-Community Support: Join our HealthSync community forum to connect with other users, share tips, and seek advice. It's a great place to exchange ideas and get inspired by others on a similar health journey."
+            android:textSize="16sp"
+            android:layout_margin="10sp"
+            android:lineSpacingExtra="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Feedback and Suggestions"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingTop="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your input is invaluable to us. If you have suggestions for new features or improvements, we'd love to hear from you. Visit the Feedback section in the app to share your thoughts and help shape the future of HealthSync."
+            android:textSize="16sp"
+            android:layout_margin="10sp"
+            android:lineSpacingExtra="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="We're Here for You"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingTop="16dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="At HealthSync, your satisfaction is our top priority. We're committed to providing you with the support you need to achieve your health and wellness goals. "
+            android:textSize="16sp"
+            android:layout_margin="10sp"
+            android:lineSpacingExtra="4dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thank you for being part of the HealthSync community—we're here to support you every step of the way."
+            android:textSize="16sp"
+            android:layout_margin="10sp"
+            android:lineSpacingExtra="4dp" />
+
+    </LinearLayout>
+</ScrollView>
+
+    <!--Reference List-->
+    <!--ʍѳђઽ૯ท.2018. How to make a ScrollView in kotlin, 10 September 2018. [Online]. Available at: https://stackoverflow.com/questions/52255575/how-to-make-a-scrollview-in-kotlin-->
