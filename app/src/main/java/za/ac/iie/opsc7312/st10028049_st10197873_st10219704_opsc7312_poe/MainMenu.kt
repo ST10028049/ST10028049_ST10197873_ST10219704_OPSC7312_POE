@@ -4,12 +4,16 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import android.content.SharedPreferences
 
 class Main_Menu : AppCompatActivity() {
 
+    private lateinit var sharedPreferences: SharedPreferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_menu)
+
+        sharedPreferences = getSharedPreferences("AppSettings", MODE_PRIVATE)
 
         // Initialize the TextViews
         val exerciseTracking: TextView = findViewById(R.id.tv_exercise_tracking)

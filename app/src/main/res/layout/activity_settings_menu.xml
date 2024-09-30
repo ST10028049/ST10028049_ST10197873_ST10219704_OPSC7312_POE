@@ -173,6 +173,7 @@
 
 
             <LinearLayout
+                android:id="@+id/aboutFunction"
                 android:background="@drawable/round_back_white10_20"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -211,6 +212,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/contactFunction"
                 android:background="@drawable/round_back_white10_20"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -250,6 +252,7 @@
 
             <!-- Support centre -->
             <LinearLayout
+                android:id="@+id/supportFunction"
                 android:background="@drawable/round_back_white10_20"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

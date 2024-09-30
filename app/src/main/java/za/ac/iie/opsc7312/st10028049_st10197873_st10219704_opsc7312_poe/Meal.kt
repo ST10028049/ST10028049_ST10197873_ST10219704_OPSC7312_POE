@@ -5,7 +5,14 @@ import android.app.TimePickerDialog
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.*
+import retrofit2.Call
+import retrofit2.Callback
 import androidx.appcompat.app.AppCompatActivity
+import api.ApiClient
+import api.ApiService
+import api.MealRequest
+import api.MealResponse
+import retrofit2.Response
 import org.json.JSONArray
 import org.json.JSONObject
 import za.ac.iie.opsc7312.st10028049_st10197873_st10219704_opsc7312_poe.R
@@ -87,6 +94,7 @@ class MealDetailsActivity : AppCompatActivity() {
         val date = dateEditText.text.toString().trim()
         val time = timeEditText.text.toString().trim()
 
+
         // Validate input
         if (mealName.isNotEmpty() && date.isNotEmpty() && time.isNotEmpty()) {
             // Create a new Meal object
@@ -98,6 +106,22 @@ class MealDetailsActivity : AppCompatActivity() {
                 date = date,
                 time = time
             )
+
+            val mealRequest = MealRequest(uid, mealName, mealDescription, mealType)
+
+            // Send meal details to API
+            val apiService = ApiClient.getClient().create(ApiService::class.java)
+            val call = apiService.addMeal(mealRequest)
+
+            call.enqueue(object : Callback<MealResponse> {
+                override fun onResponse(call: Call<MealResponse>, response: Response<MealResponse>) {
+
+                }
+
+                override fun onFailure(call: Call<MealResponse>, t: Throwable) {
+                    Toast.makeText(this@MealDetailsActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
+                }
+            })
 
             // Retrieve the existing meal list as a JSON array
             val mealsString = sharedPreferences.getString("meals", "[]")
@@ -136,4 +160,6 @@ class MealDetailsActivity : AppCompatActivity() {
         timeEditText.text.clear()
         mealTypeSpinner.setSelection(0)  // Reset spinner to first item
     }
+
+
 }

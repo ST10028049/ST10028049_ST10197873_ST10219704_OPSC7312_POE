@@ -1,6 +1,7 @@
 package za.ac.iie.opsc7312.st10028049_st10197873_st10219704_opsc7312_poe
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
@@ -14,10 +15,13 @@ class FoodDiaryActivity : AppCompatActivity() {
     private lateinit var todaysWater: TextView
     private lateinit var yesterdaysWater: TextView
     private lateinit var viewMeal: ImageView
+    private lateinit var sharedPreferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_food_diary)
+
+        sharedPreferences = getSharedPreferences("AppSettings", MODE_PRIVATE)
 
         // Initialize views
         addMealButton = findViewById(R.id.add_meal_button)

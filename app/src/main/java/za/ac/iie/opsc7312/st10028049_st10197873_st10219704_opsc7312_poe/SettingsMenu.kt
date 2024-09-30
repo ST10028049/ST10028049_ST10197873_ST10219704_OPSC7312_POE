@@ -18,6 +18,8 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.auth.FirebaseAuth
 
+// This code was adapted using ChatGPT
+// Link: https://chatgpt.com/
 class SettingsMenu : AppCompatActivity() {
 
     private lateinit var usernameDisplay: TextView
@@ -26,6 +28,9 @@ class SettingsMenu : AppCompatActivity() {
     private lateinit var backbutton: ImageView
     private lateinit var preferences: SharedPreferences
     private lateinit var logoutFunction: LinearLayout
+    private lateinit var aboutFunction: LinearLayout
+    private lateinit var contactFunction: LinearLayout
+    private lateinit var supportFunction: LinearLayout
     private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -58,10 +63,15 @@ class SettingsMenu : AppCompatActivity() {
         }
 
         logoutFunction = findViewById(R.id.logoutFunction)
+        aboutFunction = findViewById(R.id.aboutFunction)
 
         // Set an OnClickListener on the logout layout
         logoutFunction.setOnClickListener {
             logout()
+        }
+
+        aboutFunction.setOnClickListener {
+            startActivity(Intent(this, AboutUs::class.java))
         }
 
         // Check if the user is signed in
@@ -109,24 +119,7 @@ class SettingsMenu : AppCompatActivity() {
         finish() // Close the current activity
         Toast.makeText(this, "Logged out successfully", Toast.LENGTH_SHORT).show()
     }
-    private fun logoutUser() {
-        // Sign out from Firebase
-        auth.signOut()
 
-        // Sign out from Google
-        val googleSignInOptions = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).build()
-        val googleSignInClient = GoogleSignIn.getClient(this, googleSignInOptions)
-
-        googleSignInClient.signOut().addOnCompleteListener(this) { task ->
-            if (task.isSuccessful) {
-                // Successfully signed out, now navigate to the welcome screen
-                navigateToWelcome()
-            } else {
-                // Sign out failed, show a message
-                Toast.makeText(this, "Failed to log out. Try again.", Toast.LENGTH_SHORT).show()
-            }
-        }
-    }
 
     private fun setNightMode(isNightMode: Boolean) {
         val settingsText = findViewById<TextView>(R.id.settingsText) // Add this line to reference the Settings TextView

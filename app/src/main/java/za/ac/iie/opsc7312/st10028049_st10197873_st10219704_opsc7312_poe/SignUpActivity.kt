@@ -23,6 +23,10 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
+// This code was adpated from 'SIGN-IN WITH GOOGLE || FIREBASE || ANDROID STUDIO KOTLIN TUTORIAL || STEP BY STEP IMPLEMENTATION' on YouTube
+// Link: https://youtu.be/H_maapn4Q3Q?si=_vKxbPDJoA6W6-Il
+// Channel: TECH_WORLD
+// Link to channel: https://www.youtube.com/@tech_world_tutorials
 class SignUpActivity : AppCompatActivity() {
 
     companion object {
@@ -106,6 +110,7 @@ class SignUpActivity : AppCompatActivity() {
         }
     }
 
+    // Authenticates the user's Google account and signs them in
     private fun firebaseAuthWithGoogle(idToken: String) {
         val credential = GoogleAuthProvider.getCredential(idToken, null)
         auth.signInWithCredential(credential)

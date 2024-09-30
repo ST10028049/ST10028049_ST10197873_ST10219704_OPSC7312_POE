@@ -19,6 +19,6 @@ public interface ApiService {
     Call<ExerciseResponse> addExercise(@Body ExerciseRequest exerciseRequest);
 
     @Headers("Content-Type: application/json")
-    @POST("/meals/logMeal")
-    Call<MealResponse> logMeal(@Body MealRequest mealRequest);
+    @POST("/meals/addMeal")
+    Call<MealResponse> addMeal(@Body MealRequest mealRequest);
 }

@@ -3,7 +3,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@android:color/white">
+    >
 
     <!-- Back Button and Title -->
     <LinearLayout
@@ -21,16 +21,17 @@
             android:layout_marginEnd="16dp"
             android:contentDescription="Back" />
 
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Food Diary"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:textColor="@android:color/black" />
+
+
     </LinearLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Food Diary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"/>
     <!-- Log a Meal Card -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -38,6 +39,7 @@
         android:orientation="vertical"
         android:background="@drawable/card_background"
         android:padding="16dp"
+        android:layout_marginTop="30dp"
         android:layout_marginBottom="16dp">
 
         <LinearLayout
@@ -57,6 +59,7 @@
 
             <ImageView
                 android:id="@+id/add_meal_button"
+                android:layout_marginLeft="236dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_add_goal"
@@ -94,7 +97,7 @@
     <!-- View Meal Details Card -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:orientation="vertical"
         android:background="@drawable/card_background"
         android:padding="16dp"
@@ -117,6 +120,7 @@
 
             <ImageView
                 android:id="@+id/more_options_button"
+                android:layout_marginLeft="186dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/view"
@@ -184,7 +188,7 @@
                     android:id="@+id/todays_water"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Today: 1400ml"
+                    android:text="Today: 0ml"
                     android:textSize="16sp"
                     android:textColor="@android:color/black" />
             </LinearLayout>
@@ -210,7 +214,7 @@
                     android:id="@+id/yesterdays_water"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Yesterday: 2300ml"
+                    android:text="Yesterday: 0ml"
                     android:textSize="16sp"
                     android:textColor="@android:color/black" />
             </LinearLayout>

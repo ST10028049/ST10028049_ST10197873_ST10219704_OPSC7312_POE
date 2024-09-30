@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--This method is adapted from (ʍѳђઽ૯ท.2018)-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:src="@drawable/back_btn" />
+
+        <TextView
+            android:id="@+id/welcome_text"
+            android:layout_width="117dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:paddingBottom="16dp"
+            android:text="About Us"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/description_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome to HealthSync, your ultimate companion in achieving a healthier, balanced lifestyle. At HealthSync, we are passionate about empowering individuals to take charge of their well-being by offering a comprehensive suite of tools designed to make fitness, nutrition, and overall wellness accessible and enjoyable for everyone."
+            android:textSize="16sp"
+            android:layout_margin="10sp"
+            android:lineSpacingExtra="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:text="Our journey began with a simple idea: to create an app that seamlessly integrates the best features of nutrition tracking, meal planning, and workout programs, all in one place. We understand that maintaining a healthy lifestyle can be challenging, especially in today's fast-paced world. That's why we developed HealthSync—to simplify your health journey, making it more intuitive, engaging, and personalized."            android:textSize="16sp"
+            android:lineSpacingExtra="4dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Our Mission"
+            android:textSize="20sp"
+            android:layout_marginStart="120dp"
+            android:textStyle="bold"
+            android:paddingTop="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Our mission is to inspire and support individuals on their path to better health. We believe that by providing easy-to-use tools, real-time guidance, and a community of like-minded individuals, anyone can achieve their wellness goals. Whether you're looking to track your meals, plan your workouts, or monitor your overall health, HealthSync is here to guide you every step of the way."
+            android:textSize="16sp"
+            android:layout_margin="10sp"
+            android:lineSpacingExtra="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="What we offer"
+            android:textSize="20sp"
+            android:layout_marginStart="120dp"
+            android:textStyle="bold"
+            android:paddingTop="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="- Food Diary and Nutrition Logging: Keep track of your daily intake and ensure you meet your nutritional goals.\n- Meal Planning: Simplify your meal prep with customizable meal plans tailored to your dietary preferences.\n- Workout Programs: Access a variety of workout routines designed to fit your fitness level and goals.\n- Real-time Notifications: Stay motivated with reminders, updates, and alerts that keep you on track.\n- Wearable Integration: Sync with your favorite wearable devices for seamless tracking of your activities and progress.\n- Multi-language Support: We cater to diverse communities with support for multiple languages, including two South African languages.\n- Offline Functionality: Use HealthSync anywhere, anytime—even without an internet connection."
+            android:textSize="16sp"
+            android:layout_margin="10sp"
+            android:lineSpacingExtra="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Join Us"
+            android:textSize="20sp"
+            android:layout_marginStart="120dp"
+            android:textStyle="bold"
+            android:paddingTop="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="We are committed to continuous improvement and innovation, ensuring that HealthSync remains at the forefront of health and wellness technology. Join our growing community of users who are transforming their lives, one step at a time, with HealthSync."
+            android:textSize="16sp"
+            android:layout_margin="10sp"
+            android:lineSpacingExtra="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:text="Thank you for choosing HealthSync. Let's embark on this journey to a healthier you—together."
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:paddingTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>
+
+    <!--Reference List-->
+    <!--ʍѳђઽ૯ท.2018. How to make a ScrollView in kotlin, 10 September 2018. [Online]. Available at: https://stackoverflow.com/questions/52255575/how-to-make-a-scrollview-in-kotlin-->
