@@ -94,6 +94,25 @@ Automated workflows are set up using GitHub Actions to streamline the developmen
 - [Automated Build Android App with GitHub Actions](https://github.com/marketplace/actions/automated-build-android-app-with-github-action)
 - [Sample GitHub Actions Workflow](https://github.com/lMAD5112/Github-actions/blob/main/.github/workflows/build.yml)
 
+## System Requirements
+### For End Users:
+- **Operating System:** Android 8.0 (Oreo) or higher.
+- **Device Compatibility:** Smartphones and tablets with Android 8.0 or above, ARM/x86 architectures.
+- **Hardware:** 
+  - Processor: Quad-core 1.5 GHz or higher.
+  - RAM: 2 GB or more.
+  - Storage: 100 MB of free space.
+  - Fingerprint sensor for biometric authentication.
+- **Network:** Internet connection required for authentication, data sync, and grocery services.
+
+### For Developers:
+- **Operating System:** Windows 10+, macOS Catalina+, or Ubuntu 18.04+.
+- **Android Studio:** Latest version recommended.
+- **Hardware:** 
+  - Processor: Intel i5 or equivalent.
+  - RAM: 8 GB or more.
+  - Storage: 20 GB free space (SSD recommended).
+- **Dependencies:** Firebase SDK, Kotlin, Git, and REST API testing tools like Postman.
 
 ## Unit Testing
 Detailed unit testing has been implemented for key features to ensure reliability and performance:
@@ -104,8 +123,8 @@ Detailed unit testing has been implemented for key features to ensure reliabilit
 
 ## Installation and Setup
 1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/username/HealthSync.git
+   ```
+   https://github.com/ST10028049/ST10028049_ST10197873_ST10219704_ST10054051_OPSC7312_POE.git
    ```
 2. **Open in Android Studio:**
    - Launch Android Studio and select "Open an existing project."
