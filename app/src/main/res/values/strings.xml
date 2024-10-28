@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">HealthSync</string>
     <string name="default_web_client_id">794718366484-grv1vb611mao77s1vgr9ea9ej3und6hn.apps.googleusercontent.com</string>
-
+    <string name="exercise_image_description">Exercise Image</string>
     <string-array name="meal_types">
         <item>Breakfast</item>
         <item>Lunch</item>
