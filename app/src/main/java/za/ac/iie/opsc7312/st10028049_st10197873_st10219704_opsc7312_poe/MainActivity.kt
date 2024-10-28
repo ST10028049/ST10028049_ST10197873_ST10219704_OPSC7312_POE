@@ -33,8 +33,8 @@ class MainActivity : AppCompatActivity() {
         val auth = Firebase.auth
         val user = auth.currentUser
 
-        val btnSignUp = findViewById<Button>(R.id.btnSignUp)
-        val btnLogin = findViewById<Button>(R.id.btnLogin)
+        val btnSignUp = findViewById<Button>(R.id.signup)
+        val btnLogin = findViewById<Button>(R.id.login)
 
         // Navigate to Sign Up Activity
         btnSignUp.setOnClickListener {
