@@ -46,7 +46,7 @@ class Main_Menu : AppCompatActivity() {
         }
 
         fitnessPrograms.setOnClickListener {
-            startActivity(Intent(this, FitnessPrograms::class.java))
+            startActivity(Intent(this, Fitness_Tip::class.java))
         }
 
         settings.setOnClickListener {

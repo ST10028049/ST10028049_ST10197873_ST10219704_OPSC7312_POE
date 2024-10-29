@@ -1,102 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:padding="16dp"
-    android:background="#F5F5F5"
-    tools:context=".Main_Menu">
+    android:background="#5AE7E9">
+
+
+
+
+    <!-- Reports & Analytics -->
+
+    <!-- Goals -->
+
+    <!-- Fitness Programs -->
+
+    <!-- Settings -->
+
     <!-- Exercise Tracking -->
+
+    <!-- Food Diary -->
+
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="59dp"
+        android:layout_height="31dp"
+        android:src="@drawable/back_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.017"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.092" />
+
+    <TextView
+        android:id="@+id/menu"
+        android:layout_width="115dp"
+        android:layout_height="61dp"
+        android:fontFamily="@font/inter_medium"
+        android:text="Menu"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_settings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.173" />
+
     <TextView
         android:id="@+id/tv_exercise_tracking"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Exercise Tracking"
-        android:textSize="22sp"
-        android:gravity="center"
-        android:padding="16dp"
-        android:textColor="#000"
-        android:background="?android:attr/selectableItemBackground"
+        android:layout_width="415dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="196dp"
+        android:background="#8FD5F6"
         android:clickable="true"
-        android:focusable="true" />
-    <!-- Food Diary -->
+        android:focusable="true"
+        android:gravity="center"
+        android:text="Exercise Tracking"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Meal Planning -->
+
     <TextView
         android:id="@+id/tv_food_diary"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Food Diary"
-        android:textSize="22sp"
-        android:gravity="center"
-        android:padding="16dp"
-        android:textColor="#000"
-        android:background="?android:attr/selectableItemBackground"
+        android:layout_width="415dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="96dp"
+        android:background="#04A4EE"
         android:clickable="true"
-        android:focusable="true" />
-    <!-- Meal Planning -->
+        android:focusable="true"
+        android:gravity="center"
+        android:text="Food Diary"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_meal_planning"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu"
+        app:layout_constraintVertical_bias="0.025" />
+
     <TextView
         android:id="@+id/tv_meal_planning"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Meal Planning"
-        android:textSize="22sp"
-        android:gravity="center"
-        android:padding="16dp"
-        android:textColor="#000"
-        android:background="?android:attr/selectableItemBackground"
+        android:layout_width="417dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="175dp"
+        android:layout_marginEnd="8dp"
+        android:background="#0A6CFF"
         android:clickable="true"
-        android:focusable="true" />
-    <!-- Reports & Analytics -->
+        android:focusable="true"
+        android:gravity="center"
+        android:text="Meal Planning"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu" />
+
     <TextView
         android:id="@+id/tv_reports_analytics"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Reports &amp; Analytics"
-        android:textSize="22sp"
-        android:gravity="center"
-        android:padding="16dp"
-        android:textColor="#000"
-        android:background="?android:attr/selectableItemBackground"
+        android:layout_width="415dp"
+        android:layout_height="81dp"
+        android:layout_marginTop="251dp"
+        android:background="#055FE5"
         android:clickable="true"
-        android:focusable="true" />
-    <!-- Goals -->
+        android:focusable="true"
+        android:gravity="center"
+        android:text="Reports &amp; Analytics"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu" />
+
     <TextView
         android:id="@+id/tv_goals"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Goals"
-        android:textSize="22sp"
-        android:gravity="center"
-        android:padding="16dp"
-        android:textColor="#000"
-        android:background="?android:attr/selectableItemBackground"
+        android:layout_width="418dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="332dp"
+        android:layout_marginEnd="16dp"
+        android:background="#0450C3"
         android:clickable="true"
-        android:focusable="true" />
-    <!-- Fitness Programs -->
+        android:focusable="true"
+        android:gravity="center"
+        android:text="Goals"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu" />
+
     <TextView
         android:id="@+id/tv_fitness_programs"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Fitness Programs"
-        android:textSize="22sp"
-        android:gravity="center"
-        android:padding="16dp"
-        android:textColor="#000"
-        android:background="?android:attr/selectableItemBackground"
+        android:layout_width="415dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="396dp"
+        android:background="#0543A0"
         android:clickable="true"
-        android:focusable="true" />
-    <!-- Settings -->
+        android:focusable="true"
+        android:gravity="center"
+        android:text="Fitness Programs"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu" />
+
     <TextView
         android:id="@+id/tv_settings"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Settings"
-        android:textSize="22sp"
-        android:gravity="center"
-        android:padding="16dp"
-        android:textColor="#000"
-        android:background="?android:attr/selectableItemBackground"
+        android:layout_width="415dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="452dp"
+        android:background="#00245B"
         android:clickable="true"
-        android:focusable="true" />
-</LinearLayout>
+        android:focusable="true"
+        android:gravity="center"
+        android:text="Settings"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_exercise_tracking" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
