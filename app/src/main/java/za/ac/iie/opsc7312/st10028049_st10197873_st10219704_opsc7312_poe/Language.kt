@@ -40,8 +40,8 @@ class Language : AppCompatActivity() {
         setLocale(languageCode)
         saveLanguage(languageCode)
         setResult(RESULT_OK)  // Notify that language change has occurred
-        finish()  // Close the Language activity
     }
+
 
 
     private fun setLocale(languageCode: String) {
