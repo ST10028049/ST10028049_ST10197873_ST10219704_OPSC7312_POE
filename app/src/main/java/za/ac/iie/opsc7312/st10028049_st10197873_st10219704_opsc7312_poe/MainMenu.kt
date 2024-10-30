@@ -5,24 +5,34 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import android.content.SharedPreferences
+import android.content.res.Configuration
+import java.util.Locale
 
 class Main_Menu : AppCompatActivity() {
 
     private lateinit var sharedPreferences: SharedPreferences
+    private lateinit var exerciseTracking: TextView
+    private lateinit var foodDiary: TextView
+    private lateinit var mealPlanning: TextView
+    private lateinit var reportsAnalytics: TextView
+    private lateinit var goals: TextView
+    private lateinit var fitnessPrograms: TextView
+    private lateinit var settings: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_menu)
 
-        sharedPreferences = getSharedPreferences("AppSettings", MODE_PRIVATE)
+        sharedPreferences = getSharedPreferences("Settings", MODE_PRIVATE)
 
         // Initialize the TextViews
-        val exerciseTracking: TextView = findViewById(R.id.tv_exercise_tracking)
-        val foodDiary: TextView = findViewById(R.id.tv_food_diary)
-        val mealPlanning: TextView = findViewById(R.id.tv_meal_planning)
-        val reportsAnalytics: TextView = findViewById(R.id.tv_reports_analytics)
-        val goals: TextView = findViewById(R.id.tv_goals)
-        val fitnessPrograms: TextView = findViewById(R.id.tv_fitness_programs)
-        val settings: TextView = findViewById(R.id.tv_settings)
+        exerciseTracking = findViewById(R.id.tv_exercise_tracking)
+        foodDiary = findViewById(R.id.tv_food_diary)
+        mealPlanning = findViewById(R.id.tv_meal_planning)
+        reportsAnalytics = findViewById(R.id.tv_reports_analytics)
+        goals = findViewById(R.id.tv_goals)
+        fitnessPrograms = findViewById(R.id.tv_fitness_programs)
+        settings = findViewById(R.id.tv_settings)
 
         // Set click listeners for each menu option
         exerciseTracking.setOnClickListener {
@@ -37,10 +47,6 @@ class Main_Menu : AppCompatActivity() {
             startActivity(Intent(this, MealPlan::class.java))
         }
 
-        /*reportsAnalytics.setOnClickListener {
-            startActivity(Intent(this, ReportsAnalyticsActivity::class.java))
-        }*/
-
         goals.setOnClickListener {
             startActivity(Intent(this, Goals::class.java))
         }
@@ -53,4 +59,37 @@ class Main_Menu : AppCompatActivity() {
             startActivity(Intent(this, SettingsMenu::class.java))
         }
     }
+
+    override fun onResume() {
+        super.onResume()
+        // Apply the saved language each time the main menu resumes
+        val savedLanguage = getSavedLanguage()
+        setLocale(savedLanguage)
+        updateTexts(savedLanguage) // Update UI texts based on the saved language
+    }
+
+    private fun setLocale(languageCode: String) {
+        val locale = Locale(languageCode)
+        Locale.setDefault(locale)
+        val config = Configuration()
+        config.setLocale(locale)
+        resources.updateConfiguration(config, resources.displayMetrics)
+    }
+
+    private fun getSavedLanguage(): String {
+        return sharedPreferences.getString("Language", "en") ?: "en"
+    }
+
+    // Function to update texts on all views based on the selected language
+    private fun updateTexts(languageCode: String) {
+        // Update the TextViews with the appropriate strings based on the current language
+        exerciseTracking.text = getString(R.string.exercise_tracking)
+        foodDiary.text = getString(R.string.food_diary)
+        mealPlanning.text = getString(R.string.meal_planning)
+        reportsAnalytics.text = getString(R.string.reports)
+        goals.text = getString(R.string.goals)
+        fitnessPrograms.text = getString(R.string.programs)
+        settings.text = getString(R.string.settings)
+    }
 }
+

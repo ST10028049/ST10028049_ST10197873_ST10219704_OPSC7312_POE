@@ -19,7 +19,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Goals"
+        android:text="@string/goals"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_gravity="center"
@@ -36,7 +36,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add goal"
+            android:text="@string/add_goal"
             android:textSize="18sp"
             android:textColor="@color/black"/>
 
@@ -54,7 +54,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Today:"
+        android:text="@string/today"
         android:textSize="18sp"
         android:textColor="@color/black"
         android:layout_marginTop="16dp"/>
@@ -78,7 +78,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Calories eaten:"
+                android:text="@string/calories_eaten"
                 android:layout_weight="1"
                 android:textSize="16sp"
                 android:textColor="@color/black"/>
@@ -100,7 +100,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="GOAL:"
+                        android:text="@string/goal"
                         android:textSize="14sp"
                         android:textColor="@color/white"
                         android:textStyle="bold"/>
@@ -122,7 +122,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="ACTUAL:"
+                        android:text="@string/actual"
                         android:textSize="14sp"
                         android:textColor="@color/white"
                         android:textStyle="bold"/>
@@ -151,7 +151,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Calories burned:"
+                android:text="@string/calories_burned"
                 android:layout_weight="1"
                 android:textSize="16sp"
                 android:textColor="@color/black"/>
@@ -173,7 +173,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="GOAL:"
+                        android:text="@string/goal"
                         android:textSize="14sp"
                         android:textColor="@color/white"
                         android:textStyle="bold"/>
@@ -195,7 +195,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="ACTUAL:"
+                        android:text="@string/actual"
                         android:textSize="14sp"
                         android:textColor="@color/white"
                         android:textStyle="bold"/>
@@ -222,7 +222,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Steps:"
+                android:text="@string/steps"
                 android:layout_weight="1"
                 android:textSize="16sp"
                 android:textColor="@color/black"/>
@@ -244,7 +244,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="GOAL:"
+                        android:text="@string/goal"
                         android:textSize="14sp"
                         android:textColor="@color/white"
                         android:textStyle="bold"/>
@@ -266,7 +266,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="ACTUAL:"
+                        android:text="@string/actual"
                         android:textSize="14sp"
                         android:textColor="@color/white"
                         android:textStyle="bold"/>

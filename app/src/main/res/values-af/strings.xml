@@ -35,4 +35,21 @@
     <string name="log_out">Teken uit</string>
     <string name="notifications">Kennisgewings</string>
 
+    <string name="menu">Spyskaart:</string>
+    <string name="exercise_tracking">Oefening Opsporing</string>
+    <string name="food_diary">Voedseljoernaal</string>
+    <string name="meal_planning">Eetplan</string>
+    <string name="reports">Verslae &amp; Analise</string>
+    <string name="goals">Doelwitte</string>
+    <string name="programs">Fiksheidsprogramme</string>
+
+    <string name="add_goal">Voeg doelwit by</string>
+    <string name="today">Vandag:</string>
+    <string name="calories_eaten">Kalorieë geëet:</string>
+    <string name="calories_burned">Kalorieë verbrand:</string>
+    <string name="steps">Stappe:</string>
+    <string name="goal">DOELWIT:</string>
+    <string name="actual">WERKLIK:</string>
+
+
 </resources>

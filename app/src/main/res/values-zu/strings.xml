@@ -34,4 +34,21 @@
     <string name="language">Ulimi</string>
     <string name="log_out">Phuma</string>
     <string name="notifications">Izaziso</string>
+
+    <string name="menu">Imenyu:</string>
+    <string name="exercise_tracking">Ukuqapha Ukuzivocavoca</string>
+    <string name="food_diary">Idayari Yokudla</string>
+    <string name="meal_planning">Uhlelo Lokudla</string>
+    <string name="reports">Izibalo &amp; Ukuhlaziya</string>
+    <string name="goals">Izinhloso</string>
+    <string name="programs">Izinhlelo Zokufaneleka</string>
+
+    <string name="add_goal">Engeza inhloso</string>
+    <string name="today">Namuhla:</string>
+    <string name="calories_eaten">Ama-calories adliwe:</string>
+    <string name="calories_burned">Ama-calories ashisiwe:</string>
+    <string name="steps">Izinyathelo:</string>
+    <string name="goal">INHLOSO:</string>
+    <string name="actual">OKUNGOKOQOBO:</string>
+
 </resources>

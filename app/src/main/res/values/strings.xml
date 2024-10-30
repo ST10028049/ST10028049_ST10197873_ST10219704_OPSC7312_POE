@@ -34,4 +34,21 @@
     <string name="log_out">Log out</string>
     <string name="notifications">Notifications</string>
 
+    <string name="menu">Menu:</string>
+    <string name="exercise_tracking">Exercise Tracking</string>
+    <string name="food_diary">Food Diary</string>
+    <string name="meal_planning">Meal Planning</string>
+    <string name="reports">Reports &amp; Analytics</string>
+    <string name="goals">Goals</string>
+    <string name="programs">Fitness Programs</string>
+
+
+    <string name="add_goal">Add goal</string>
+    <string name="today">Today:</string>
+    <string name="calories_eaten">Calories eaten:</string>
+    <string name="calories_burned">Calories burned:</string>
+    <string name="steps">Steps:</string>
+    <string name="goal">GOAL:</string>
+    <string name="actual">ACTUAL:</string>
+
 </resources>
