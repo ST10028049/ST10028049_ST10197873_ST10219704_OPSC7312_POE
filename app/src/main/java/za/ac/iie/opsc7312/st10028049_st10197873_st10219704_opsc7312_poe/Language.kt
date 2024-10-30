@@ -6,9 +6,15 @@ import android.content.res.Configuration
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
+import android.widget.TextView
 import java.util.*
 
 class Language : AppCompatActivity() {
+
+    private lateinit var buttonEnglish: Button
+    private lateinit var buttonAfrikaans: Button
+    private lateinit var buttonZulu: Button
+    private lateinit var textHello: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,32 +23,35 @@ class Language : AppCompatActivity() {
         setLocale(getSavedLanguage())
         setContentView(R.layout.activity_language)
 
-        // Set up button for English
-        val buttonEnglish: Button = findViewById(R.id.button_english)
+        // Initialize UI components
+        textHello = findViewById(R.id.text_hello)
+        buttonEnglish = findViewById(R.id.button_english)
+        buttonAfrikaans = findViewById(R.id.button_afrikaans)
+        buttonZulu = findViewById(R.id.button_zulu)
+
+        // Set click listeners for buttons
         buttonEnglish.setOnClickListener {
             changeLanguage("en")
         }
-
-        // Set up button for Afrikaans
-        val buttonAfrikaans: Button = findViewById(R.id.button_afrikaans)
         buttonAfrikaans.setOnClickListener {
             changeLanguage("af")
         }
-
-        // Set up button for Zulu
-        val buttonZulu: Button = findViewById(R.id.button_zulu)
         buttonZulu.setOnClickListener {
             changeLanguage("zu")
         }
+
+        // Update texts for all views on the page
+        updateTexts()
     }
 
     private fun changeLanguage(languageCode: String) {
         setLocale(languageCode)
         saveLanguage(languageCode)
         setResult(RESULT_OK)  // Notify that language change has occurred
+
+        // Update texts immediately on the current page
+        updateTexts()
     }
-
-
 
     private fun setLocale(languageCode: String) {
         val locale = Locale(languageCode)
@@ -62,5 +71,13 @@ class Language : AppCompatActivity() {
     private fun getSavedLanguage(): String {
         val sharedPreferences: SharedPreferences = getSharedPreferences("Settings", Context.MODE_PRIVATE)
         return sharedPreferences.getString("Language", "en") ?: "en"
+    }
+
+    // Function to update texts on all views
+    private fun updateTexts() {
+        textHello.text = getString(R.string.hello_message)
+        buttonEnglish.text = getString(R.string.english)
+        buttonAfrikaans.text = getString(R.string.afrikaans)
+        buttonZulu.text = getString(R.string.zulu)
     }
 }
