@@ -51,4 +51,10 @@
     <string name="goal">INHLOSO:</string>
     <string name="actual">OKUNGOKOQOBO:</string>
 
+    <string name="tip">Ithiphu!</string>
+    <string name="tip_a">-Zifudumeze imizuzu engu-5-10 ngaphambi kokuzivocavoca ukuvimbela noma yikuphi ukulimala ngokugxila emisipha ethile.</string>
+    <string name="tip_b">-Gqoka izingubo ezikhululekile nezicathulo futhi uhlale uhlanzekile ngokuphuza amanzi ngesikhathi sokuzivocavoca.</string>
+    <string name="tip_c">-Ngemva kokuzivocavoca, yenza ukujima okupholile njengokuzelula.</string>
+    <string name="begin">Qala</string>
+
 </resources>

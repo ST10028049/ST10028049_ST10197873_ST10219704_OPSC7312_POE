@@ -51,4 +51,10 @@
     <string name="goal">GOAL:</string>
     <string name="actual">ACTUAL:</string>
 
+    <string name="tip">Tip!</string>
+    <string name="tip_a">-Warm up for 5-10 minutes before the exercises to prevent any injuries by focusing on certain muscles.</string>
+    <string name="tip_b">-Wear comfortable clothing and footwear and stay hydrated by drinking water through the workout.</string>
+    <string name="tip_c">-After exercising, perform cool down workouts like stretching.</string>
+    <string name="begin">Begin</string>
+
 </resources>

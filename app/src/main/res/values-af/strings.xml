@@ -51,5 +51,11 @@
     <string name="goal">DOELWIT:</string>
     <string name="actual">WERKLIK:</string>
 
+    <string name="tip">Wenk!</string>
+    <string name="tip_a">-Warm op vir 5-10 minute voor die oefeninge om enige beserings te voorkom deur op sekere spiere te fokus.</string>
+    <string name="tip_b">- Dra gemaklike klere en skoene en bly gehidreer deur water te drink deur die oefensessie.</string>
+    <string name="tip_c">- Nadat u geoefen het, voer afkoeloefeninge uit soos strek.</string>
+    <string name="begin">Begin</string>
+
 
 </resources>
