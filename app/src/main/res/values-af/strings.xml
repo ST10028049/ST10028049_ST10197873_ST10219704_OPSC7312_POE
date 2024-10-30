@@ -19,11 +19,20 @@
         <item>Water Inname</item>
     </string-array>
 
-    <string name="hello_message">Hallo, welkom by HealthSync!</string>
+    <string name="hello_message">Kies \'n taal hieronder:</string>
+    <string name="english">Engels</string>
+    <string name="afrikaans">Afrikaans</string>
+    <string name="zulu">Zulu</string>
 
-    <string-array name="language_options">
-        <item>Engels</item>
-        <item>Afrikaans</item>
-        <item>Zulu</item>
-    </string-array>
+    <string name="settings">Instellings</string>
+    <string name="edit_profile">Wysig profiel</string>
+    <string name="dark">Donker modus</string>
+    <string name="about">Oor</string>
+    <string name="contact">Kontak ons</string>
+    <string name="support">Ondersteuningsentrum</string>
+    <string name="achievements">Prestasies</string>
+    <string name="language">Taal</string>
+    <string name="log_out">Teken uit</string>
+    <string name="notifications">Kennisgewings</string>
+
 </resources>

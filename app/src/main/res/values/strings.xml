@@ -18,11 +18,20 @@
         <item>Water Intake</item>
     </string-array>
 
-    <string name="hello_message">Hello, welcome to HealthSync!</string>
+    <string name="hello_message">Select a language below:</string>
+    <string name="english">English</string>
+    <string name="afrikaans">Afrikaans</string>
+    <string name="zulu">Zulu</string>
 
-    <string-array name="language_options">
-        <item>English</item>
-        <item>Afrikaans</item>
-        <item>Zulu</item>
-    </string-array>
+    <string name="settings">Settings</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="dark">Dark Mode</string>
+    <string name="about">About</string>
+    <string name="contact">Contact Us</string>
+    <string name="support">Support Centre</string>
+    <string name="achievements">Achievements</string>
+    <string name="language">Language</string>
+    <string name="log_out">Log out</string>
+    <string name="notifications">Notifications</string>
+
 </resources>

@@ -16,17 +16,17 @@
         android:id="@+id/button_english"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="English" />
+        android:text="@string/english" />
 
     <Button
         android:id="@+id/button_afrikaans"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Afrikaans" />
+        android:text="@string/afrikaans" />
 
     <Button
         android:id="@+id/button_zulu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Zulu" />
+        android:text="@string/zulu" />
 </LinearLayout>

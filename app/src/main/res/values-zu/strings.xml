@@ -19,11 +19,19 @@
         <item>Ukuphuza Amanzi</item>
     </string-array>
 
-    <string name="hello_message">Sawubona, wamukelekile ku-HealthSync!</string>
+    <string name="hello_message">Khetha ulimi ngezansi:</string>
+    <string name="english">IsiNgisi</string>
+    <string name="afrikaans">IsiBhunu</string>
+    <string name="zulu">IsiZulu</string>
 
-    <string-array name="language_options">
-        <item>IsiNgisi</item>
-        <item>IsiBhunu</item>
-        <item>IsiZulu</item>
-    </string-array>
+    <string name="settings">Izilungiselelo</string>
+    <string name="edit_profile">Hlela iphrofayela</string>
+    <string name="dark">Imodi Emnyama</string>
+    <string name="about">Mayelana</string>
+    <string name="contact">Xhumana nathi</string>
+    <string name="support">Isikhungo Sokusekela</string>
+    <string name="achievements">Izimpumelelo</string>
+    <string name="language">Ulimi</string>
+    <string name="log_out">Phuma</string>
+    <string name="notifications">Izaziso</string>
 </resources>
