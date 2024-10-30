@@ -39,8 +39,10 @@ class Language : AppCompatActivity() {
     private fun changeLanguage(languageCode: String) {
         setLocale(languageCode)
         saveLanguage(languageCode)
-        recreate() // Refresh to apply language change
+        setResult(RESULT_OK)  // Notify that language change has occurred
+        finish()  // Close the Language activity
     }
+
 
     private fun setLocale(languageCode: String) {
         val locale = Locale(languageCode)

@@ -87,8 +87,11 @@ class SettingsMenu : AppCompatActivity() {
         }
 
         languageFunction.setOnClickListener {
-            startActivity(Intent(this, Language::class.java))
+            val intent = Intent(this, Language::class.java)
+            startActivityForResult(intent, LANGUAGE_REQUEST_CODE)
         }
+
+
 
 
         // Check if the user is signed in
@@ -170,4 +173,16 @@ class SettingsMenu : AppCompatActivity() {
         startActivity(intent)
         finish()  // Close current activity to prevent going back here
     }
+
+    companion object {
+        private const val LANGUAGE_REQUEST_CODE = 100
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == LANGUAGE_REQUEST_CODE) {
+            recreate()  // Refresh the activity to apply the language change
+        }
+    }
+
 }
