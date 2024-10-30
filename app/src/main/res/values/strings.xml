@@ -17,4 +17,12 @@
         <item>Steps</item>
         <item>Water Intake</item>
     </string-array>
+
+    <string name="hello_message">Hello, welcome to HealthSync!</string>
+
+    <string-array name="language_options">
+        <item>English</item>
+        <item>Afrikaans</item>
+        <item>Zulu</item>
+    </string-array>
 </resources>

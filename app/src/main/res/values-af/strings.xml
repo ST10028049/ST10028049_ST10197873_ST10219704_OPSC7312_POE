@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">HealthSync</string>
+    <string name="default_web_client_id">794718366484-grv1vb611mao77s1vgr9ea9ej3und6hn.apps.googleusercontent.com</string>
+    <string name="exercise_image_description">Oefening Beeld</string>
+
+    <string-array name="meal_types">
+        <item>Ontbyt</item>
+        <item>Middagete</item>
+        <item>Aandete</item>
+        <item>Happie</item>
+        <item>Nagereg</item>
+        <item>Ander</item>
+    </string-array>
+
+    <string-array name="goal_types">
+        <item>Kalorieë Eet</item>
+        <item>Kalorieë Verbrand</item>
+        <item>Stappe</item>
+        <item>Water Inname</item>
+    </string-array>
+
+    <string name="hello_message">Hallo, welkom by HealthSync!</string>
+
+    <string-array name="language_options">
+        <item>Engels</item>
+        <item>Afrikaans</item>
+        <item>Zulu</item>
+    </string-array>
+</resources>

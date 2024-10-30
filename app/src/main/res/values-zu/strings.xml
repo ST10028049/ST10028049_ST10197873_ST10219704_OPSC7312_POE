@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">HealthSync</string>
+    <string name="default_web_client_id">794718366484-grv1vb611mao77s1vgr9ea9ej3und6hn.apps.googleusercontent.com</string>
+    <string name="exercise_image_description">Isithombe Sokuzivocavoca</string>
+
+    <string-array name="meal_types">
+        <item>Isidlo sasekuseni</item>
+        <item>Isidlo sasemini</item>
+        <item>Isidlo sakusihlwa</item>
+        <item>Okudliwayo</item>
+        <item>Idizethi</item>
+        <item>Okunye</item>
+    </string-array>
+
+    <string-array name="goal_types">
+        <item>Dla Ama-calories</item>
+        <item>Shisa Ama-calories</item>
+        <item>Izigaba</item>
+        <item>Ukuphuza Amanzi</item>
+    </string-array>
+
+    <string name="hello_message">Sawubona, wamukelekile ku-HealthSync!</string>
+
+    <string-array name="language_options">
+        <item>IsiNgisi</item>
+        <item>IsiBhunu</item>
+        <item>IsiZulu</item>
+    </string-array>
+</resources>

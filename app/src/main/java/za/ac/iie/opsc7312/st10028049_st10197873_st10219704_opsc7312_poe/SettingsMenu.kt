@@ -29,6 +29,7 @@ class SettingsMenu : AppCompatActivity() {
     private lateinit var preferences: SharedPreferences
     private lateinit var logoutFunction: LinearLayout
     private lateinit var aboutFunction: LinearLayout
+    private lateinit var languageFunction: LinearLayout
     private lateinit var contactFunction: LinearLayout
     private lateinit var supportFunction: LinearLayout
     private lateinit var auth: FirebaseAuth
@@ -62,6 +63,7 @@ class SettingsMenu : AppCompatActivity() {
             setNightMode(isChecked)
         }
 
+        languageFunction = findViewById(R.id.LanguageFunction)
         logoutFunction = findViewById(R.id.logoutFunction)
         aboutFunction = findViewById(R.id.aboutFunction)
         contactFunction = findViewById(R.id.contactFunction)
@@ -82,6 +84,10 @@ class SettingsMenu : AppCompatActivity() {
 
         supportFunction.setOnClickListener {
             startActivity(Intent(this, Support::class.java))
+        }
+
+        languageFunction.setOnClickListener {
+            startActivity(Intent(this, Language::class.java))
         }
 
 

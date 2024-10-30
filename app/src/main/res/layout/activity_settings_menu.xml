@@ -331,6 +331,7 @@
 
             <!-- Language -->
             <LinearLayout
+                android:id="@+id/LanguageFunction"
                 android:background="@drawable/round_back_white10_20"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
