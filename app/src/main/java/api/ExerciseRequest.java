@@ -1,21 +1,15 @@
 package api;
 
-import com.google.firebase.Timestamp;
-import java.util.Date;
-
 public class ExerciseRequest {
     private String uid;
     private String exerciseName;
-    private int sets;
-    private int reps;
-    private int caloriesBurnt;
-    private Date date;
-    private Date startTime;
-    private Date endTime;
-    private int duration;  // Duration in minutes
+    private String sets;
+    private String reps;
+    private String caloriesBurnt;
     private String notes;
+    private String createdAt;
 
-    // Getter and Setter for uid
+    // Getters and Setters
     public String getUid() {
         return uid;
     }
@@ -24,7 +18,6 @@ public class ExerciseRequest {
         this.uid = uid;
     }
 
-    // Getter and Setter for exerciseName
     public String getExerciseName() {
         return exerciseName;
     }
@@ -33,75 +26,43 @@ public class ExerciseRequest {
         this.exerciseName = exerciseName;
     }
 
-    // Getter and Setter for sets
-    public int getSets() {
+    public String getSets() {
         return sets;
     }
 
-    public void setSets(int sets) {
+    public void setSets(String sets) {
         this.sets = sets;
     }
 
-    // Getter and Setter for reps
-    public int getReps() {
+    public String getReps() {
         return reps;
     }
 
-    public void setReps(int reps) {
+    public void setReps(String reps) {
         this.reps = reps;
     }
 
-    // Getter and Setter for caloriesBurnt
-    public int getCaloriesBurnt() {
+    public String getCaloriesBurnt() {
         return caloriesBurnt;
     }
 
-    public void setCaloriesBurnt(int caloriesBurnt) {
+    public void setCaloriesBurnt(String caloriesBurnt) {
         this.caloriesBurnt = caloriesBurnt;
     }
 
-    // Getter and Setter for date
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
-    // Getter and Setter for startTime
-    public Date getStartTime() {
-        return startTime;
-    }
-
-    public void setStartTime(Date startTime) {
-        this.startTime = startTime;
-    }
-
-    // Getter and Setter for endTime
-    public Date getEndTime() {
-        return endTime;
-    }
-
-    public void setEndTime(Date endTime) {
-        this.endTime = endTime;
-    }
-
-    // Getter and Setter for duration
-    public int getDuration() {
-        return duration;
-    }
-
-    public void setDuration(int duration) {
-        this.duration = duration;
-    }
-
-    // Getter and Setter for notes
     public String getNotes() {
         return notes;
     }
 
     public void setNotes(String notes) {
         this.notes = notes;
+    }
+
+    public String getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
     }
 }

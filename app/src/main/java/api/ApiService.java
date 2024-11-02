@@ -1,3 +1,4 @@
+// ApiService.java
 package api;
 
 import retrofit2.Call;
@@ -15,8 +16,12 @@ public interface ApiService {
     Call<LoginResponse> loginUser(@Body LoginRequest loginRequest);
 
     @Headers("Content-Type: application/json")
-    @POST("/exercise/addExercise")
+    @POST("/exercises/addExercise")
     Call<ExerciseResponse> addExercise(@Body ExerciseRequest exerciseRequest);
+
+    @Headers("Content-Type: application/json")
+    @POST("/exercises/trackExercise")  // New endpoint for trackExercise
+    Call<ExerciseResponse> trackExercise(@Body ExerciseRequest exerciseRequest);
 
     @Headers("Content-Type: application/json")
     @POST("/meals/addMeal")
