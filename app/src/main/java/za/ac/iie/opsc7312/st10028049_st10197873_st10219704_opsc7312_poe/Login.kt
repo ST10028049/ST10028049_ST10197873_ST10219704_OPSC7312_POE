@@ -30,7 +30,7 @@ class Login : AppCompatActivity() {
 
         editTextEmail = findViewById(R.id.email)
         editTextPassword = findViewById(R.id.password)
-        buttonLogin = findViewById(R.id.login_button)
+        buttonLogin = findViewById(R.id.button2)
         textViewSignUp = findViewById(R.id.signup_link)
 
         sharedPreferences = getSharedPreferences("AppSettings", MODE_PRIVATE)
