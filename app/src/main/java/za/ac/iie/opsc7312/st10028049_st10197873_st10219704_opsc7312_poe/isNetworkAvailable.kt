@@ -1,4 +1,4 @@
-// NetworkUtils.kt
+
 package za.ac.iie.opsc7312.st10028049_st10197873_st10219704_opsc7312_poe
 
 import android.content.Context

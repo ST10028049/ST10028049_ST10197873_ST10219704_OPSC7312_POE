@@ -20,6 +20,13 @@ import retrofit2.Callback
 import retrofit2.Response
 import java.util.*
 
+// This code was adapted from Solution Code Android and ChatGPT
+// YouTube video: how to access data offline in Firebase android studio\Enabline OfflineCapabilitiesAndroid - Firebase
+// YouTube link: https://youtu.be/_GqFDFi9NuA?si=PIzLv32X6ysuzZbM
+// Solution Code Android: https://www.youtube.com/@SolutionCodeAndroid
+// ChatGPT Link: https://chatgpt.com/
+
+
 class MealDetailsActivity : AppCompatActivity() {
 
     private lateinit var mealNameEditText: EditText

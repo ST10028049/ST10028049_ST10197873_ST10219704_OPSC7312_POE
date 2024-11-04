@@ -6,6 +6,11 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
+// This code was adapted from Android Developers and modified using ChatGPT
+// Link for Android Developers: https://developer.android.com/training/data-storage/sqlite
+// Android Developers: Save data using SQLite
+// Link for ChatGPT: https://chatgpt.com/
+
 class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 
     companion object {
@@ -18,6 +23,7 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         private const val COLUMN_TYPE = "type"
     }
 
+    // Create the database table for storing meal details
     override fun onCreate(db: SQLiteDatabase?) {
         val createTable = "CREATE TABLE $TABLE_MEALS (" +
                 "$COLUMN_UID TEXT, " +
@@ -32,6 +38,7 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         onCreate(db)
     }
 
+    // To insert a meal into the table
     fun insertMeal(uid: String, name: String, description: String, type: String): Boolean {
         val db = writableDatabase
         val values = ContentValues().apply {
@@ -45,6 +52,7 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         return result != -1L
     }
 
+    // To get all the meals and their details from the table
     fun getAllMeals(): List<Map<String, String>> {
         val meals = mutableListOf<Map<String, String>>()
         val db = readableDatabase

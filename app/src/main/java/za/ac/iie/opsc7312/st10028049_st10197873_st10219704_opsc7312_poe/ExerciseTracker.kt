@@ -19,6 +19,8 @@ import retrofit2.Response
 import za.ac.iie.opsc7312.st10028049_st10197873_st10219704_opsc7312_poe.NetworkUtils.isNetworkAvailable
 import java.util.*
 
+// This code was modified using
+
 class ExerciseTrackerActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
