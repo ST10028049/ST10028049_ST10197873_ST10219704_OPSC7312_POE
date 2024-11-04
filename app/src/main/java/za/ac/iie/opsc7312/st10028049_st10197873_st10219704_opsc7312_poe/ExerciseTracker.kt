@@ -37,7 +37,7 @@ class ExerciseTrackerActivity : AppCompatActivity() {
         dateEditText = findViewById(R.id.date_picker)
         startTimeEditText = findViewById(R.id.start_time_picker)
         endTimeEditText = findViewById(R.id.end_time_picker)
-        val logExerciseButton: Button = findViewById(R.id.log_exercise_button)
+        val logExerciseButton: Button = findViewById(R.id.save_button)
         sharedPreferences = getSharedPreferences("AppSettings", MODE_PRIVATE)
 
         dateEditText.setOnClickListener { showDatePicker() }
@@ -78,7 +78,7 @@ class ExerciseTrackerActivity : AppCompatActivity() {
         val sets = findViewById<EditText>(R.id.sets_input).text.toString()
         val reps = findViewById<EditText>(R.id.reps_input).text.toString()
         val caloriesBurnt = findViewById<EditText>(R.id.calories_burnt).text.toString()
-        val notes = findViewById<EditText>(R.id.notes).text.toString()
+        val notes = findViewById<EditText>(R.id.notes_input).text.toString()
         val createdAt = Calendar.getInstance().time.toString()  // Or format as ISO if required by API
 
         if (uid == null) {
