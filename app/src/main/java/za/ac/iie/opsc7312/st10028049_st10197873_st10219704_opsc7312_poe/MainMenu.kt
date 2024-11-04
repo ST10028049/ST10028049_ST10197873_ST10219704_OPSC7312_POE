@@ -11,6 +11,7 @@ import java.util.Locale
 class Main_Menu : AppCompatActivity() {
 
     private lateinit var sharedPreferences: SharedPreferences
+    private lateinit var menu: TextView
     private lateinit var exerciseTracking: TextView
     private lateinit var foodDiary: TextView
     private lateinit var mealPlanning: TextView
@@ -26,6 +27,7 @@ class Main_Menu : AppCompatActivity() {
         sharedPreferences = getSharedPreferences("Settings", MODE_PRIVATE)
 
         // Initialize the TextViews
+        menu = findViewById(R.id.menu)
         exerciseTracking = findViewById(R.id.tv_exercise_tracking)
         foodDiary = findViewById(R.id.tv_food_diary)
         mealPlanning = findViewById(R.id.tv_meal_planning)
@@ -83,6 +85,7 @@ class Main_Menu : AppCompatActivity() {
     // Function to update texts on all views based on the selected language
     private fun updateTexts(languageCode: String) {
         // Update the TextViews with the appropriate strings based on the current language
+        menu.text = getString(R.string.menu)
         exerciseTracking.text = getString(R.string.exercise_tracking)
         foodDiary.text = getString(R.string.food_diary)
         mealPlanning.text = getString(R.string.meal_planning)
