@@ -9,6 +9,10 @@ import android.widget.Button
 import android.widget.TextView
 import java.util.*
 
+// This code was adapted from Philipp Lackner on YouTube
+// YouTube video: How to Translate Your Android App to Any Language (SO EASY!) - Android Studio Tutorial
+// Link: https://youtu.be/LXbpsBtIIeM?si=M6UrtusUd_x0SS_H
+// YouTube channel: https://www.youtube.com/@PhilippLackner
 class Language : AppCompatActivity() {
 
     private lateinit var buttonEnglish: Button
@@ -68,6 +72,7 @@ class Language : AppCompatActivity() {
         editor.apply()
     }
 
+    // To be used in other classes to get the saved language
     private fun getSavedLanguage(): String {
         val sharedPreferences: SharedPreferences = getSharedPreferences("Settings", Context.MODE_PRIVATE)
         return sharedPreferences.getString("Language", "en") ?: "en"

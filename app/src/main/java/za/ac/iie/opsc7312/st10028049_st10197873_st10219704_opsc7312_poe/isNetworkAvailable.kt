@@ -5,6 +5,10 @@ import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 
+// This code was adapted using ChatGPT
+// Link: https://chatgpt.com/
+
+// Used to see if the device is connected to a network
 object NetworkUtils {
     fun isNetworkAvailable(context: Context): Boolean {
         val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
