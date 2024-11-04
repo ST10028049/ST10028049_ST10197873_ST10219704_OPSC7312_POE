@@ -16,6 +16,7 @@ import com.google.firebase.auth.FirebaseAuth
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import za.ac.iie.opsc7312.st10028049_st10197873_st10219704_opsc7312_poe.NetworkUtils.isNetworkAvailable
 import java.util.*
 
 class ExerciseTrackerActivity : AppCompatActivity() {
@@ -96,20 +97,65 @@ class ExerciseTrackerActivity : AppCompatActivity() {
             this.createdAt = createdAt
         }
 
-        apiService.trackExercise(exerciseRequest).enqueue(object : Callback<ExerciseResponse> {
-            override fun onResponse(call: Call<ExerciseResponse>, response: Response<ExerciseResponse>) {
-                if (response.isSuccessful) {
-                    Toast.makeText(this@ExerciseTrackerActivity, "Exercise tracked successfully", Toast.LENGTH_SHORT).show()
-                } else {
-                    Toast.makeText(this@ExerciseTrackerActivity, "Failed to track exercise: ${response.message()}", Toast.LENGTH_SHORT).show()
+        if (isNetworkAvailable(this)) {
+            // Send data to API
+            apiService.trackExercise(exerciseRequest).enqueue(object : Callback<ExerciseResponse> {
+                override fun onResponse(call: Call<ExerciseResponse>, response: Response<ExerciseResponse>) {
+                    if (response.isSuccessful) {
+                        Toast.makeText(this@ExerciseTrackerActivity, "Exercise tracked successfully", Toast.LENGTH_SHORT).show()
+                    } else {
+                        Toast.makeText(this@ExerciseTrackerActivity, "Failed to track exercise: ${response.message()}", Toast.LENGTH_SHORT).show()
+                    }
                 }
+
+                override fun onFailure(call: Call<ExerciseResponse>, t: Throwable) {
+                    Toast.makeText(this@ExerciseTrackerActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
+                }
+            })
+        } else {
+            // Store data locally if offline
+            val dbHelper = ExerciseDatabaseHelper(this)
+            val isInserted = dbHelper.insertExercise(uid, exerciseName, sets, reps, caloriesBurnt, notes, createdAt)
+            if (isInserted) {
+                Toast.makeText(this, "Exercise saved locally. Will sync when online.", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "Failed to save exercise locally.", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    private fun syncOfflineExercises() {
+        val dbHelper = ExerciseDatabaseHelper(this)
+        val exercises = dbHelper.getAllExercises()
+
+        for (exercise in exercises) {
+            val exerciseRequest = ExerciseRequest().apply {
+                this.uid = exercise["uid"] ?: ""
+                this.exerciseName = exercise["exercise_name"] ?: ""
+                this.sets = exercise["sets"] ?: ""
+                this.reps = exercise["reps"] ?: ""
+                this.caloriesBurnt = exercise["calories_burnt"] ?: ""
+                this.notes = exercise["notes"] ?: ""
+                this.createdAt = exercise["created_at"] ?: ""
             }
 
-            override fun onFailure(call: Call<ExerciseResponse>, t: Throwable) {
-                Toast.makeText(this@ExerciseTrackerActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
-            }
-        })
+            apiService.trackExercise(exerciseRequest).enqueue(object : Callback<ExerciseResponse> {
+                override fun onResponse(call: Call<ExerciseResponse>, response: Response<ExerciseResponse>) {
+                    if (response.isSuccessful) {
+                        // Clear data from the local database after successful sync
+                        dbHelper.clearExercises()
+                        Toast.makeText(this@ExerciseTrackerActivity, "Offline exercises synced successfully", Toast.LENGTH_SHORT).show()
+                    }
+                }
+
+                override fun onFailure(call: Call<ExerciseResponse>, t: Throwable) {
+                    Toast.makeText(this@ExerciseTrackerActivity, "Sync error: ${t.message}", Toast.LENGTH_SHORT).show()
+                }
+            })
+        }
     }
+
+
 
 
 }
